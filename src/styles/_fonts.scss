@@ -1,0 +1,69 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+@font-face {
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('/public/fonts/outfit.ttf') format('truetype');
+}
+
+* {
+	font-family: 'Outfit';
+	font-weight: 400;
+	color: $text;
+}
+
+// Copy and Headings
+// Sizes calculated with a typescale generator
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 700;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 4.21rem;
+	/* 67.36px */
+
+	@include view-mobile {
+		font-size: 3rem;
+	}
+}
+
+h2 {
+	font-size: 3.158rem;
+	/* 50.56px */
+
+	@include view-mobile {
+		font-size: 2.5rem;
+	}
+}
+
+h3 {
+	font-size: 2.369rem;
+	/* 37.92px */
+
+	@include view-mobile {
+		font-size: 2.5rem;
+	}
+}
+
+h4 {
+	font-size: 1.777rem;
+	/* 28.48px */
+}
+
+h5 {
+	font-size: 1.333rem;
+	/* 21.28px */
+}
+
+small {
+	font-size: 0.75rem;
+	/* 12px */
+}

@@ -1,9 +1,38 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'fonts';
+
 html {
 	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+
+	@include view-mobile {
+		font-size: 14px;
+	}
+}
+
+body {
+	background-color: $background;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+main {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 80px;
+
+	@include view-tablet {
+		padding: 40px;
+	}
+
+	@include view-mobile {
+		padding: 20px;
+	}
 }

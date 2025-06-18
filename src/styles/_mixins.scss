@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+// Breakpoints
+@mixin view-tablet {
+	@media (max-width: 1000px) {
+		@content;
+	}
+}
+
+@mixin view-mobile {
+	@media (max-width: 600px) {
+		@content;
+	}
+}
+
+// Hover only if supported by device
+@mixin hover {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+// Buttons
+@mixin primaryButton {
+	cursor: pointer;
+	appearance: none;
+	border: 2px solid $primary;
+	background-color: $primary;
+	border-radius: 8px;
+	padding: 8px 16px;
+	color: $background;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: 0.2s;
+	font-size: 1rem;
+
+	@include hover {
+		background-color: $background;
+		color: $text;
+		border-color: $text;
+	}
+}
+
+// Inputs
+@mixin textInput {
+	background: $background;
+	color: $text;
+	border: 2px solid $primary;
+	border-radius: 8px;
+	padding: 8px;
+	font-size: 1rem;
+}
