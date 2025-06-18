@@ -1,0 +1,61 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+h1,
+h2 {
+	text-align: center;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+h2 {
+	margin-bottom: 40px;
+}
+
+form {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 400px;
+	padding: 20px;
+	border-radius: 8px;
+	border: 1px solid $text;
+	display: flex;
+	flex-direction: column;
+
+	.input-container {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+
+		&:first-child {
+			margin-bottom: 20px;
+		}
+
+		input {
+			@include textInput;
+		}
+	}
+
+	.forgot-password {
+		cursor: pointer;
+		display: block;
+		background: none;
+		border: none;
+		border-radius: none;
+		text-decoration: underline;
+		color: $primary;
+		width: fit-content;
+		align-self: flex-end;
+		margin-top: 4px;
+		transition: 0.2s;
+
+		@include hover {
+			color: $text;
+		}
+	}
+
+	button[type='submit'] {
+		margin-top: 20px;
+		@include primaryButton;
+	}
+}

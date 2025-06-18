@@ -3,10 +3,12 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<link rel="icon" type="image/svg+xml" href="/images/vite.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" href="/src/styles/global.scss">
+	<link rel="stylesheet" href="/src/styles/global.scss" />
+	<link rel="stylesheet" href="/src/styles/index.scss" />
+	<script type="module" src="/src/scripts/middleware.ts"></script>
 	<script type="module" src="/src/scripts/index.ts"></script>
 
 	<title>Todo App - Login</title>
@@ -14,7 +16,28 @@
 
 <body>
 	<main>
-		<h1>Login</h1>
+		<h1>Todo App</h1>
+		<h2>Like any other but different.</h2>
+
+		<form class="login-form">
+			<div class="input-container">
+				<label for="email" required>E-mail</label>
+				<input type="email" id="email" name="email" autocomplete="email" placeholder="admin@example.org"
+					required />
+			</div>
+
+			<div class="input-container">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" autocomplete="current-password"
+					placeholder="password" />
+			</div>
+
+			<button class="forgot-password" type="button">
+				I forgot my password
+			</button>
+
+			<button type="submit">Login</button>
+		</form>
 	</main>
 </body>
 
