@@ -37,7 +37,7 @@ describe('AuthService', () => {
 		expect(AuthService.validateSessionToken('not-json')).toBe(false);
 	});
 
-	it('should invalidate an expired sessionToken', () => {
+	it('should deny an expired sessionToken', () => {
 		const expiredToken = {
 			sessionToken: 'expired',
 			expires: new Date(Date.now() - 1000 * 10).toISOString(),
