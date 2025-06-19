@@ -25,23 +25,23 @@ Once you’ve completed the sample exercise, we would be happy to receive a GitH
 
 - [x] Create a detail page
 - [x] This page should only be accessible if the user is logged in. Otherwise, redirect to the login page
-- [ ] Create a form that includes the following fields
-    - [ ] Title (max. 100 characters)
-    - [ ] Text (max. 300 characters)
-    - [ ] Display the number of used characters below the text field: x/300
-    - [ ] Date field
-    - [ ] Save button
-    - [ ] When clicking the Save button, the form data should appear in a list below the form.
-    - [ ] Ensure form validation: all fields must be filled
-    - [ ] After saving, the form should be cleared
-- [ ] Below the form, display a list of the entries created (title + date)
-- [ ] When a new entry is created, it should be added to this list
-- [ ] The list must not be persisted. This means that reloading the page may result in an empty list
-- [ ] Add an Edit button (or link) behind each entry. This should load the entry back into the form at the top of the page
-- [ ] Once the form is saved, it should update the entry in the list and then be cleared again
+- [x] Create a form that includes the following fields
+    - [x] Title (max. 100 characters)
+    - [x] Text (max. 300 characters)
+    - [x] Display the number of used characters below the text field: x/300
+    - [x] Date field
+    - [x] Save button
+    - [x] When clicking the Save button, the form data should appear in a list below the form.
+    - [x] Ensure form validation: all fields must be filled
+    - [x] After saving, the form should be cleared
+- [x] Below the form, display a list of the entries created (title + date)
+- [x] When a new entry is created, it should be added to this list
+- [x] The list must not be persisted. This means that reloading the page may result in an empty list
+- [x] Add an Edit button (or link) behind each entry. This should load the entry back into the form at the top of the page
+- [x] Once the form is saved, it should update the entry in the list and then be cleared again
 
 #### Add test
 
 _NOTE: I will be using Vitest because Jest is not compatible with Vite OOTB. From my understanding it should be a drop-in replacement._
 
-- [ ] Test login functionality
+- [x] Test login functionality
