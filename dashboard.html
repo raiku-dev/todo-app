@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="stylesheet" href="/src/styles/global.scss" />
+	<link rel="stylesheet" href="/src/styles/dashboard.scss" />
 	<script type="module" src="/src/scripts/middleware.ts"></script>
 	<script type="module" src="/src/scripts/dashboard.ts"></script>
 
@@ -16,6 +17,50 @@
 <body>
 	<main>
 		<h1>Dashboard</h1>
+
+		<button class="new-task-btn">
+			New Task
+		</button>
+
+		<dialog>
+			<h4>
+				<span>Create</span>
+
+				<button class="close-btn">
+					<span></span>
+					<span></span>
+				</button>
+			</h4>
+
+			<form>
+				<div class="input-container">
+					<label for="title">Title</label>
+					<input type="text" name="title" id="title" maxlength="100" required placeholder="Finish To-Do app">
+				</div>
+
+				<div class="input-container">
+					<label for="text">Text</label>
+					<textarea rows="4" type="text" name="text" id="text" maxlength="300" required
+						placeholder="Do X after doing Y..."></textarea>
+				</div>
+				<p class="char-count">
+					<span class="current">0</span>/<span class="total"></span>
+				</p>
+
+				<div class="input-container">
+					<label for="date">Date</label>
+					<input type="date" name="date" id="date" required>
+				</div>
+
+				<input type="hidden" name="id">
+
+				<p class="err"></p>
+
+				<button type="submit">Save</button>
+			</form>
+		</dialog>
+
+		<div class="task-list"></div>
 	</main>
 </body>
 

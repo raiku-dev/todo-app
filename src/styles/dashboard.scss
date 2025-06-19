@@ -1,0 +1,143 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+h1 {
+	margin-bottom: 40px;
+}
+
+.new-task-btn {
+	@include primaryButton;
+}
+
+dialog {
+	padding: 20px;
+	background-color: $background;
+	border: 2px solid $text;
+	border-radius: 8px;
+	margin: auto;
+	width: 100%;
+	max-width: min(500px, calc(100dvw - 40px));
+
+	&::backdrop {
+		backdrop-filter: blur(4px) brightness(0.5);
+	}
+
+	h4 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		.close-btn {
+			border: none;
+			border-radius: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 30px;
+			height: 30px;
+			background-color: $background;
+			position: relative;
+
+			span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: block;
+				width: 20px;
+				height: 2px;
+				background-color: $text;
+				transform: translate(-50%, -50%) rotate(-45deg);
+
+				&:nth-child(2) {
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+			}
+		}
+	}
+
+	form {
+		.input-container {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			&:first-child {
+				margin-bottom: 20px;
+			}
+
+			input,
+			textarea {
+				color-scheme: dark;
+				@include textInput;
+			}
+
+			textarea {
+				resize: none;
+			}
+		}
+
+		&:has(textarea:invalid) {
+			.char-count {
+				.current {
+					color: red;
+				}
+			}
+		}
+
+		.char-count {
+			width: fit-content;
+			margin-left: auto;
+			margin-top: 4px;
+			margin-bottom: 0px;
+		}
+
+		.err {
+			display: none;
+			margin: 10px;
+			color: red;
+			font-weight: bold;
+
+			&[data-visible] {
+				display: block;
+			}
+		}
+
+		button[type="submit"] {
+			display: block;
+			margin-top: 20px;
+			margin-left: auto;
+			@include primaryButton;
+		}
+	}
+}
+
+.task-list {
+	margin-top: 40px;
+
+	.task {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: 2px solid $text;
+		padding: 10px;
+
+		.content {
+			h4 {
+				margin-bottom: 4px;
+			}
+
+			.date {
+				display: block;
+				color: $primary;
+				margin-bottom: 20px;
+			}
+		}
+
+		.edit-btn {
+			@include primaryButton;
+		}
+	}
+}
