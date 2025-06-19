@@ -32,12 +32,18 @@
 					placeholder="password" />
 			</div>
 
-			<button class="forgot-password" type="button">
+			<button class="forgot-password" type="button" popovertarget="forgot-popover">
 				I forgot my password
 			</button>
 
+			<p class="err"></p>
+
 			<button type="submit">Login</button>
 		</form>
+
+		<div id="forgot-popover" popover>
+			<p>Admin123</p>
+		</div>
 	</main>
 </body>
 

@@ -54,8 +54,32 @@ form {
 		}
 	}
 
+	.err {
+		display: none;
+		margin: 10px;
+		color: red;
+		font-weight: bold;
+
+		&[data-visible] {
+			display: block;
+		}
+	}
+
 	button[type='submit'] {
 		margin-top: 20px;
 		@include primaryButton;
+	}
+}
+
+#forgot-popover {
+	margin: auto auto;
+	padding: 40px;
+	font-size: 1.5rem;
+	background-color: $background;
+	border-radius: 8px;
+	border: 2px solid $text;
+
+	&::backdrop {
+		backdrop-filter: blur(4px) brightness(0.5);
 	}
 }
