@@ -24,7 +24,6 @@
 
 // Buttons
 @mixin primaryButton {
-	cursor: pointer;
 	appearance: none;
 	border: 2px solid $primary;
 	background-color: $primary;
