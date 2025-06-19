@@ -1,5 +1,24 @@
 # Practice Task:
 
+## How to run locally
+```bash
+# 1. Clone repo
+# 2. Install deps
+npm i
+
+# Run dev locally
+npm run dev
+
+# Build locally
+npm run build
+
+# Preview build locally
+npm preview
+
+# Run tests
+npm test
+```
+
 ## Create a TypeScript application to organize todos.
 
 ### Assumptions:
